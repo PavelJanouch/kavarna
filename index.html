@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kavárna</title>
+    <style>
+        /* Resetování výchozích stylů prohlížeče */
+        body, h1, h2, h3, h4, h5, h6, p, ul, li {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #fff; /* Změna barvy textu na bílou */
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://img.freepik.com/fotos-premium/fondo-granos-cafe_76440-1285.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Styly pro hlavičku */
+        header {
+            background-color: rgb(80, 70, 70);
+            color: #fff;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            position: relative; /* Přidání relative pozice */
+            left: 80px; /* Posunutí loga doprava */
+        }
+
+        .logo img {
+            width: 180px; /* Změna šířky loga */
+        }
+
+        h1 {
+            font-size: 48px; /* Velikost názvu */
+            text-align: center; /* Zarovnání názvu doprostřed */
+            margin-top: 35px;
+            margin-left: 265px;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: flex-end; /* Zarovnání položek navigace doprava */
+        }
+
+        nav ul li {
+            margin-right: 70px; /* Posunutí položek navigace doleva */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #000000;
+        }
+
+        /* Styly pro obsah */
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            font-size: 48px;
+        }
+
+        section {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 20px;
+            color: #fff; /* Změna barvy textu na bílou */
+        }
+
+        p {
+            font-size: 18px;
+            color: #fff; /* Změna barvy textu na bílou */
+            margin-bottom: 20px;
+        }
+
+        /* Styly pro nabídku */
+        .menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .menu-item {
+            margin: 0 15px;
+            border: 2px solid #fff; /* Změna barvy ohraničení */
+            border-radius: 15px; /* Zvětšení poloměru rohů */
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            font-size: 24px;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px 15px 0 0; /* Zvětšení poloměru rohů */
+        }
+
+        .menu-item-content {
+            padding: 20px;
+        }
+
+        .menu-item h3 {
+            margin-bottom: 10px;
+            color: #fff; /* Změna barvy textu na bílou */
+        }
+
+        /* Styly pro patičku */
+        footer {
+            background-color: rgb(80, 70, 70);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        /* Styly pro kontejner úvodu */
+        #uvod.container {
+            padding: 120px 20px; /* Zvětšení vnějšího poloměru */
+            margin-top: 0; /* Posunutí nahoru */
+        }
+
+        /* Styly pro tlačítko */
+        .btn {
+            display: inline-block;
+            background-color: #ffdf4e;
+            color: #333;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ffcc33;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo-removebg-preview.png" alt="logo kavárny">
+        </div>
+        <h1>Kavárna u Pavla</h1> <!-- Přidání názvu -->
+        <nav>
+            <ul>
+                <li><a href="#uvod">Úvod</a></li>
+                <li><a href="#nabidka">Nabídka</a></li>
+                <li><a href="#o-nas">O nás</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="uvod" class="container">
+            <h2>Vítejte v kavárně!</h2>
+            <p>Rádi Vás přivítáme a představíme Vám naši nabídku.</p>
+            <a href="#nabidka" class="btn">Prohlédnout nabídku</a>
+        </section>
+
+        <section id="nabidka">
+            <div class="container">
+                <h2>Nabídka</h2>
+                <div class="menu">
+                    <div class="menu-item">
+                        <img src="https://via.placeholder.com/300" alt="Káva">
+                        <div class="menu-item-content">
+                            <h3>Káva</h3>
+                            <p>Espresso, Cappuccino, Latte, Macchiato</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://via.placeholder.com/300" alt="Dezerty">
+                        <div class="menu-item-content">
+                            <h3>Dezerty</h3>
+                            <p>Tiramisu, Cheesecake, Zákusky</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://via.placeholder.com/300" alt="Sendviče">
+                        <div class="menu-item-content">
+                            <h3>Sendviče</h3>
+                            <p>Bageta s pestem, Club sandwich, Tuna melt</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Posunutí obsahu níže
+        window.onload = function() {
+            window.scrollTo(0, 500);
+        };
+    </script>
+</body>
+</html>
